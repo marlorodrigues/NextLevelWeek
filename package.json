@@ -1,0 +1,30 @@
+{
+  "name": "NextLevelWeek",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js",
+    "refresh": "node src/database/db.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlorodrigues/NextLevelWeek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlorodrigues/NextLevelWeek/issues"
+  },
+  "homepage": "https://github.com/marlorodrigues/NextLevelWeek#readme"
+}
