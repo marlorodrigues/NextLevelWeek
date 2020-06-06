@@ -59,7 +59,15 @@ server.post('/savepoint', (req, res) => {
 
 server.get('/search-results', (req, res) => {
 
-    dbm.all(`SELECT * FROM places;`, function (error, rows) {
+    const searchThis = req.query.search
+
+    if (searchThis === "") {
+        return res.render('search-results.html', { lenght: 0 })
+    }
+
+
+
+    dbm.all(`SELECT * FROM places WHERE city LIKE '%${searchThis}%';`, function (error, rows) {
         if (error)
             return console.log(error)
 
