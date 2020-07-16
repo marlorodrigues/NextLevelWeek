@@ -11,15 +11,12 @@ function populateUFs() {
         })
 }
 
-
 function getCities(event) {
     const citySelected = document.querySelector("select[name=city]")
     const stateInput = document.querySelector("input[name=state]")
     const ufValue = event.target.value
     const indexOfSelectedState = event.target.selectedIndex
     stateInput.value = event.target.options[indexOfSelectedState].text
-
-
 
     citySelected.innerHTML = `<option value="">Selecione a cidade</option>`
     citySelected.disabled = true
@@ -50,17 +47,17 @@ for (const item of itensToCollect) {
     item.addEventListener('click', handleSelectedItem)
 }
 
+
 const colectedItens = document.querySelector('input[name=itens]')
 let selectedItens = []
 
 function handleSelectedItem(event) {
     const itemLI = event.target
-
+    
     itemLI.classList.toggle('selected')
     const itemId = itemLI.dataset.id
 
     const alreadySelected = selectedItens.findIndex(item => item === itemId)
-
 
     if (alreadySelected >= 0) {
         const filteredItens = selectedItens.filter(item => item !== itemId)
